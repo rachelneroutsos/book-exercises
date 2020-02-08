@@ -36,11 +36,11 @@ flights %>%
 
 # You can look up these airports in the `airports` data frame!
 airports %>% 
-  filter(faa == "CAE")
+  filter(faa == "CAE") 
 
 
 # Which city was flown to with the highest average speed?
 flights %>% 
   group_by(dest) %>% 
   summarize(avg_speed = mean(distance/air_time, na.rm = TRUE)) %>% 
-  filter(avg_speed == max(avg_speed, na.rm = TRUE))
+  filter(avg_speed == max(avg_speed, na.rm = TRUE)) 
